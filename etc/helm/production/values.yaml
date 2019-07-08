@@ -7,6 +7,8 @@ image:
   repository: gcr.io/rehive-services/client-plue-docs
   tag: latest
   pullPolicy: IfNotPresent
+envFromSecret:
+  enabled: true
 service:
   name: nginx
   type: NodePort
