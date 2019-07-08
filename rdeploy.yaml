@@ -1,0 +1,11 @@
+version: '1'
+configs:
+  production:
+    project_name: client-plue-docs
+    docker_image: gcr.io/rehive-services/client-plue-docs
+    cloud_project: rehive-services
+    cluster: production
+    namespace: client-plue-docs
+    helm_chart: rehive/rehive-service
+    helm_chart_version: 0.1.36
+    helm_values_path: ./etc/helm/production/values.yaml
