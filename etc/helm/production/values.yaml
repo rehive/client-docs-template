@@ -8,7 +8,7 @@ image:
   tag: latest
   pullPolicy: IfNotPresent
 envFromSecret:
-  enabled: true
+  enabled: false
 service:
   name: nginx
   type: NodePort
