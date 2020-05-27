@@ -7,5 +7,5 @@ configs:
     cluster: production
     namespace: client-plue-docs
     helm_chart: rehive/rehive-service
-    helm_chart_version: 0.1.36
+    helm_chart_version: 0.2.2
     helm_values_path: ./etc/helm/production/values.yaml
