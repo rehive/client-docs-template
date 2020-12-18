@@ -22,7 +22,7 @@ Each payment processor has a unique subtype and identifier field
     "description": "Pay using a wallet balance.",
     "currencies": [],
     "longest_expiration_time": 0,
-    "rehive_transaction_identifier": null,
-    "rehive_subtype": "receive_email"
+    "transaction_identifier": null,
+    "transaction_subtype": "receive_email"
 }
 ```

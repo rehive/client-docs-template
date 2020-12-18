@@ -61,7 +61,7 @@ An example of a request with transactions:
   "status": "success",
   "data": [
     {
-      "rehive_code": "459b3407-3009-4f77-bbbf-5d6e12788958",
+      "transaction_code": "459b3407-3009-4f77-bbbf-5d6e12788958",
       "settled": false,
       "payment_processor_quote": 14,
       "details": {
