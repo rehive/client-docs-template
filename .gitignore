@@ -1,0 +1,7 @@
+# Hugo default output directory
+/public
+resources/_gen/
+.env
+opt
+
+*.DS_Store

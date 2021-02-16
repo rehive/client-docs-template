@@ -1,0 +1,24 @@
+baseURL: "https://api.example.com"
+languageCode: "en-us"
+title: "Documentation"
+theme: "hexon-hugo-theme"
+
+params:
+  companyName: ExampleCompany
+  companyId: example_company
+  appUrl: https://wallet.example.com
+  logoUrl: https://example.com
+  logoImage: https://rehive.s3.amazonaws.com/companies/2458/logos/6c4d8de546d74b30a3d19c78fb42ec16_1611825066.png
+  heroImage: https://rehive.s3.amazonaws.com/companies/2458/logos/6c4d8de546d74b30a3d19c78fb42ec16_1611825066.png
+  favicon: https://rehive.s3.amazonaws.com/companies/2458/logos/6c4d8de546d74b30a3d19c78fb42ec16_1611825066.png
+
+  primaryColor: "#002d6d"
+  secondaryColor: "#ff2852"
+
+  extraNavItems:
+    - title: Log in
+      url: https://wallet.example.com
+
+  extraFooterItems:
+    - title: Log in
+      url: https://wallet.example.com
