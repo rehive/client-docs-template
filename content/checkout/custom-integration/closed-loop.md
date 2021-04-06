@@ -20,7 +20,7 @@ The required information from the user is:
 
 Once the user has provided this information you will need to PATCH the Invoice as follows:
 ```
-curl -X PATCH "/requests/<invoice-id>/" -H "accept: application/json" 
+curl -X PATCH "https://api.invoices.plue.io/requests/<invoice-id>/" -H "accept: application/json" 
 -H "Content-Type: application/json" 
 -d "{ \"payer_email\": \"user@example.com\", \"payer_mobile_number\": \"+27777777777\"}"
 ```
