@@ -25,9 +25,9 @@ curl -X PATCH "/requests/<invoice-id>/" -H "accept: application/json"
 -d "{ \"payer_email\": \"user@example.com\", \"payer_mobile_number\": \"+27777777777\"}"
 ```
 
-If successful the user will receive an SMS with the OTP code. You will need to provide a way for the user to enter this code so you can make a POST request to: `/manager/businesses/<business_id>/invoice/<invoice-id>/otp-challenge` as follows:
+If successful the user will receive an SMS with the OTP code. You will need to provide a way for the user to enter this code so you can make a POST request to: `https://api.invoices.plue.io/requests/<invoice-id>/otp_challenge/` as follows:
 ```
-curl -X POST "/requests/<invoice-id>/otp_challenge/" 
+curl -X POST "https://api.invoices.plue.io/requests/<invoice-id>/otp_challenge/" 
 -H "accept: application/json" -H "Content-Type: application/json" --data '{"otp": "401703"}'
 ```
 

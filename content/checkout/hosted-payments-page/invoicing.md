@@ -72,7 +72,7 @@ In the case where an invoice is no longer valid the status can be PATCH’d usin
 ### Endpoints
 URL | methods
 ---|---
-`​/manager​/businesses​/{business_id}​/invoices​/` | `PATCH`
+`​https:/api.business.plue.io/manager​/businesses​/{business_id}​/invoices​/` | `PATCH`
 
 PATCH the endpoint with the new `cancelled` status and this will stop the user from viewing/interacting with the invoice.
 

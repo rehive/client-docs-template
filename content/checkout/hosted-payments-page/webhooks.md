@@ -32,7 +32,7 @@ After being set up a Webhook will be sent each time the Invoice has a Status cha
   "description": "Online payment for clothes",
   "status": "paid",
   "return_url": "https://my-ecommerce-store.com/order/<USER_ORDER_PAGE>",
-  "redirect_url": "https://app.plue.com/checkout/?request=e7d7a5a2-9a97-4930-a992-589a6133488f&return_url=https://my-ecommerce-store.com/order/<USER_ORDER_PAGE>",
+  "redirect_url": "https://wallet.plue.com/checkout/?request=e7d7a5a2-9a97-4930-a992-589a6133488f&return_url=https://my-ecommerce-store.com/order/<USER_ORDER_PAGE>",
   "payment_processor_quotes": [
     {
         "id": "27fd41af-279e-44e7-b384-d6a6fe54f160",

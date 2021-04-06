@@ -54,7 +54,7 @@ URL | methods
   "description": "Online payment for clothes",
   "status": "initiated",
   "return_url": "https://my-ecommerce-store.com/order/<USER_ORDER_PAGE>",
-  "redirect_url": "https://<company-specified-invoice-url>.com/?request=e7d7a5a2-9a97-4930-a992-589a6133488f&return_url=https://my-ecommerce-store.com/order/<USER_ORDER_PAGE>",
+  "redirect_url": "https://wallet.plue.io/checkout?request=e7d7a5a2-9a97-4930-a992-589a6133488f&return_url=https://my-ecommerce-store.com/order/<USER_ORDER_PAGE>",
   "payment_processor_quotes": [],
   "created": 0,
   "updated": 0
@@ -72,7 +72,7 @@ In the case where an invoice is no longer valid the status can be PATCH’d usin
 ### Endpoints
 URL | methods
 ---|---
-`​/manager​/businesses​/{business_id}​/invoices​/` | `PATCH`
+`​https:/api.business.plue.io/manager​/businesses​/{business_id}​/invoices​/` | `PATCH`
 
 PATCH the endpoint with the new `cancelled` status and this will stop the user from viewing/interacting with the invoice.
 
