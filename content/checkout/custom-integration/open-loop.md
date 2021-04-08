@@ -33,7 +33,7 @@ The reference is the Bitcoin address generated for this deposit which the user p
 ### Handling statuses
 
 ##### Processing
-The user has chosen a payment processor. In certain open-loop cases you might want to poll the `/manager/businesses/<business_id>/invoices/<invoice-id>/transactions/` endpoint to check for new deposits being made. This is particularly important in the case of crypto deposits waiting for confirmations.
+The user has chosen a payment processor. In certain open-loop cases you might want to poll the `https://api.business.plue.io/api/manager/businesses/<business_id>/invoices/<invoice-id>/transactions/` endpoint to check for new deposits being made. This is particularly important in the case of crypto deposits waiting for confirmations.
 
 ##### Paid
 If the amount sent by the user matches the quoted amount exactly the entire Invoice will be set to the Paid status. Once this has happened you can assume the funds have been received and processed. Any order statuses on your e-commerce platform can be set to their Completed states.
