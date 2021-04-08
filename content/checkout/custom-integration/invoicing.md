@@ -20,7 +20,7 @@ The first step to initiate the payment process is to create an invoice. This wou
 ### Endpoints
 URL | methods
 ---|---
-`​​https://api.business.plue.io/manager​/businesses​/{business_id}​/invoices​/` | `POST`
+`​​https://api.business.plue.io/api/manager​/businesses​/{business_id}​/invoices​/` | `POST`
 
 ### Example data:
 ```
@@ -72,7 +72,7 @@ In the case where an invoice is no longer valid the status can be PATCH’d usin
 ### Endpoints
 URL | methods
 ---|---
-`​https://api.business.plue.io/manager​/businesses​/{business_id}​/invoices​/` | `PATCH`
+`​https://api.business.plue.io/api/manager​/businesses​/{business_id}​/invoices​/` | `PATCH`
 
 PATCH the endpoint with the new `cancelled` status and this will stop the user from viewing/interacting with the invoice.
 

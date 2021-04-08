@@ -20,7 +20,7 @@ The first step to initiate the payment process is to create an invoice. This wou
 ### Endpoints
 URL | methods
 ---|---
-`​​https://api.business.plue.io/manager​/businesses​/{business_id}​/invoices​/` | `POST`
+`​​https://api.business.plue.io/api/manager​/businesses​/{business_id}​/invoices​/` | `POST`
 
 ### Example data:
 ```
