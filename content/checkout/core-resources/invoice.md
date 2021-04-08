@@ -47,7 +47,7 @@ cancelled | The invoice has been set to cancelled by a manager.
     "metadata": null,
     "status": "overpaid",
     "account": null,
-    "redirect_url": "http://wallet.plue.com/checkout?request=deb62287-dbc6-4f11-8f83-d753f6cf1284",
+    "redirect_url": "https://wallet.plue.com/checkout?request=deb62287-dbc6-4f11-8f83-d753f6cf1284",
     "payer_email": "customer@plue.com",
     "return_url": null,
     "payment_processor_quotes": [

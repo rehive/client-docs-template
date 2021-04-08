@@ -50,7 +50,7 @@ Any requests that expire are no longer usable and a new Invoice will need to be 
 ### Displaying processing Crypto transactions
 One of the unique aspects about cryptocurrency is transactions often need to be confirmed multiple times before they can be considered completely irreversible. This means that a user might make a deposit to pay for an Invoice but the invoice will only Complete once the transaction associated with it Complete/is confirmed. You will want to display this to the user so they know they have a pending successful transaction.
 
-To display this information you will use the transactions endpoint of the invoice: `https:/api.business.plue.io/manager/businesses/<business_id>/invoices/<invoice-id>/transactions/`.
+To display this information you will use the transactions endpoint of the invoice: `https://api.business.plue.io/manager/businesses/<business_id>/invoices/<invoice-id>/transactions/`.
 
 While an Invoice is in the “Processing” state and a relevant crypto payment processor has been selected such as “native_bitcoin” pole the above endpoint until an non-empty array is returned.
 
