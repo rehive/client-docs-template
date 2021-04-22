@@ -14,10 +14,3 @@ The hosted option allows for minimal integration to get started with receiving p
 3. The customer is redirected to the hosted page which handles the selection and display of payment options
 4. Once the payment has been processed the hosted payments page will redirect the user back if specified
 5. A webhook is sent to any relevant services when the Invoice has been completed.
-
-
-
-
-
-
-

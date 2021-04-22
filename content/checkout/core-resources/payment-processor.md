@@ -7,7 +7,7 @@ weight: 2
 
 ### Object
 
-Payment processors objects contain information for the relevant payment options available for users. They are identified by the `unique_string_name` field which can be used to PATCH the Invoice’s `primariy_payment_processor` field for selecting/changing payment processors.
+Payment processors objects contain information for the relevant payment options available for users. They are identified by the `unique_string_name` field which can be used to PATCH the Invoice’s `primary_payment_processor` field for selecting/changing payment processors.
 
 Each payment processor has a unique subtype and identifier field
 

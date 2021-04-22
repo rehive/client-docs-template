@@ -33,7 +33,7 @@ The reference is the Bitcoin address generated for this deposit which the user p
 ### Handling statuses
 
 ##### Processing
-The user has chosen a payment processor. In certain open-loop cases you might want to pole the `/manager/businesses/<business_id>/invoices/<invoice-id>/transactions/` endpoint to check for new deposits being made. This is particularly important in the case of crypto deposits waiting for confirmations.
+The user has chosen a payment processor. In certain open-loop cases you might want to poll the `{{params businessApi}}/api/manager/businesses/<business_id>/invoices/<invoice-id>/transactions/` endpoint to check for new deposits being made. This is particularly important in the case of crypto deposits waiting for confirmations.
 
 ##### Paid
 If the amount sent by the user matches the quoted amount exactly the entire Invoice will be set to the Paid status. Once this has happened you can assume the funds have been received and processed. Any order statuses on your e-commerce platform can be set to their Completed states.
@@ -50,7 +50,7 @@ Any requests that expire are no longer usable and a new Invoice will need to be 
 ### Displaying processing Crypto transactions
 One of the unique aspects about cryptocurrency is transactions often need to be confirmed multiple times before they can be considered completely irreversible. This means that a user might make a deposit to pay for an Invoice but the invoice will only Complete once the transaction associated with it Complete/is confirmed. You will want to display this to the user so they know they have a pending successful transaction.
 
-To display this information you will use the transactions endpoint of the invoice: `/manager/businesses/<business_id>/invoices/<invoice-id>/transactions/`.
+To display this information you will use the transactions endpoint of the invoice: `{{<param businessApi>}}/api/manager/businesses/<business_id>/invoices/<invoice-id>/transactions/`.
 
 While an Invoice is in the “Processing” state and a relevant crypto payment processor has been selected such as “native_bitcoin” pole the above endpoint until an non-empty array is returned.
 
@@ -101,8 +101,3 @@ An example of a request with transactions:
 ```
 
 Within the `metadata` field of the transaction object the relevant payment processor, in this case Bitcoin, will include a section such as `service_bitcoin` that contains both the confirmations and the Bitcoin transaction hash(tx_hash field). When a `Pending` transaction exists in this array both the hash and the confirmations with a message such as “You payment has been detected <tx_hash> with <confirmations> confirmations is currently waiting to be confirmed.”
-
-
-
-
-

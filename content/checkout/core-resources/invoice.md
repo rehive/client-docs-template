@@ -47,7 +47,7 @@ cancelled | The invoice has been set to cancelled by a manager.
     "metadata": null,
     "status": "overpaid",
     "account": null,
-    "redirect_url": "<domain>?request=deb62287-dbc6-4f11-8f83-d753f6cf1284",
+    "redirect_url": "{{param appUrl}}?request=deb62287-dbc6-4f11-8f83-d753f6cf1284",
     "payer_email": "customer@example.com",
     "return_url": null,
     "payment_processor_quotes": [

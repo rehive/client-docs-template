@@ -72,13 +72,3 @@ After being set up a Webhook will be sent each time the Invoice has a Status cha
 The most relevant field is the `status` field. On successful payment this will be updated to the `paid` state. Once your service receives a webhook with the `paid` status any orders made by the user can be completed on your third party e-commerce platform.
 
 Another new field is the `payment_processor_quotes` array. This will contain a list of methods chosen by the user to make the payment. It can be used to check what currencies your users are paying or if they over/underpaid and by what amount.
-
-
-
-
-
-
-
-
-
-
