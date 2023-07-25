@@ -12,60 +12,60 @@ Before being able to process webhooks you will need to create a webhook via the 
 After being set up a Webhook will be sent each time the Invoice has a Status change.
 
 ### Example Webhook:
-```
+```json
 {
- “data”: { 
-  "id": "e7d7a5a2-9a97-4930-a992-589a6133488f",
-  "user": "{}", # User object
-  "account": "string",
-  "request_reference": "MY_ECOMMERCE_REFERENCE",
-  "request_currency": {
-      "code": "USD",
-      "display_code": "USD",
-      "description": "United States Dollar",
-      "symbol": "$",
-      "unit": "dollar",
-      "divisibility": 2
-    },
-  "request_amount": 10000,
-  "Primary_payment_processor": “”,
-  "description": "Online payment for clothes",
-  "status": "paid",
-  "return_url": "https://my-ecommerce-store.com/order/<USER_ORDER_PAGE>",
-  "redirect_url": "{{<param appUrl>}}/checkout/?request=e7d7a5a2-9a97-4930-a992-589a6133488f&return_url=https://my-ecommerce-store.com/order/<USER_ORDER_PAGE>",
-  "payment_processor_quotes": [
-    {
-        "id": "27fd41af-279e-44e7-b384-d6a6fe54f160",
-        "request": 16,
-        "reference": "459b3407-3009-4f77-bbbf-5d6e12788958",
-        "deposit_details": {},
-        "payment_processor": {
-            "id": "19dff821-a349-4bbc-a929-72bf9fcef4d1",
-            "unique_string_name": "native_otp",
-            "logo": "",
-            "name": "Native OTP",
-            "description": "Pay using a wallet balance via an OTP.",
-            "currencies": [],
-            "longest_expiration_time": 0,
+    "data": {
+        "id": "e7d7a5a2-9a97-4930-a992-589a6133488f",
+        "user": {},
+        "account": "string",
+        "request_reference": "MY_ECOMMERCE_REFERENCE",
+        "request_currency": {
+          "code": "USD",
+          "display_code": "USD",
+          "description": "United States Dollar",
+          "symbol": "$",
+          "unit": "dollar",
+          "divisibility": 2
         },
-        "currency": {
-            "code": "USD",
-            "display_code": "USD",
-            "description": "United States Dollar",
-            "symbol": "$",
-            "unit": "dollar",
-            "divisibility": 2
-        },
-        "amount": 200,
-        "total_paid": 200,
-        "expiration_date": null,
+        "request_amount": 10000,
+        "Primary_payment_processor": "",
+        "description": "Online payment for clothes",
         "status": "paid",
-        "conversion_quote": null
-      }
-    ],
-  "created": 0,
-  "updated": 0
-}
+        "return_url": "https://my-ecommerce-store.com/order/<USER_ORDER_PAGE>",
+        "redirect_url": "{{<param appUrl>}}/checkout/?request=e7d7a5a2-9a97-4930-a992-589a6133488f&return_url=https://my-ecommerce-store.com/order/<USER_ORDER_PAGE>",
+        "payment_processor_quotes": [
+        {
+            "id": "27fd41af-279e-44e7-b384-d6a6fe54f160",
+            "request": 16,
+            "reference": "459b3407-3009-4f77-bbbf-5d6e12788958",
+            "deposit_details": {},
+            "payment_processor": {
+                "id": "19dff821-a349-4bbc-a929-72bf9fcef4d1",
+                "unique_string_name": "native_otp",
+                "logo": "",
+                "name": "Native OTP",
+                "description": "Pay using a wallet balance via an OTP.",
+                "currencies": [],
+                "longest_expiration_time": 0,
+            },
+            "currency": {
+                "code": "USD",
+                "display_code": "USD",
+                "description": "United States Dollar",
+                "symbol": "$",
+                "unit": "dollar",
+                "divisibility": 2
+            },
+            "amount": 200,
+            "total_paid": 200,
+            "expiration_date": null,
+            "status": "paid",
+            "conversion_quote": null
+          }
+        ],
+        "created": 0,
+        "updated": 0
+    }
 }
 ```
 

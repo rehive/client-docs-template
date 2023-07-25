@@ -8,9 +8,11 @@ weight: 2
 An invoice encapsulates the entire payments process. Once the customer has selected {{<param companyName>}} as a payment option the next step is for your system to generate a {{<param companyName>}}  invoice for their payment.
 
 ### Create the invoice
+
 The first step to initiate the payment process is to create an invoice. This would usually be done once the user has selected {{<param companyName>}} as the payment option for the order they wish to pay for.
 
 ##### The core pieces of information required to create an invoice are:
+
 1. The total amount to be paid in your base currency
 2. Return url: When the user has completed their off-site payment this is the url they should be redirected back to.
 3. An optional “reference” field which ideally should match an identifier for your order within your e-commerce system
@@ -23,7 +25,8 @@ URL | methods
 `{{params businessApi}}​/api/manager​/businesses​/{business_id}​/invoices​/` | `POST`
 
 ### Example data:
-```
+
+```json
 {
   "request_reference": "MY_ECOMMERCE_REFERENCE",
   "request_amount": 10000, # Value of invoice in cents
@@ -35,7 +38,8 @@ URL | methods
 ```
 
 ### Example success response:
-```
+
+```json
 {
   "id": "e7d7a5a2-9a97-4930-a992-589a6133488f",
   "user": "{}", # User object

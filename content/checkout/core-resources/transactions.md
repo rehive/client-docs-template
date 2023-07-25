@@ -9,7 +9,7 @@ A Transaction object returned matches the structure of a {{<param companyName>}}
 
 ### Object
 
-```
+```json
 {
     "transaction_code": "459b3407-3009-4f77-bbbf-5d6e12788958",
     "settled": false,

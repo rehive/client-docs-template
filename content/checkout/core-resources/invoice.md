@@ -8,6 +8,7 @@ weight: 1
 The Invoice the core resource that encapsulates all logic around receiving user payments. All other resources are associated with the Invoice in various ways. 
 
 ### Statuses
+
 The statuses of an invoice will tell you whether or not the user has paid, underpaid, overpaid etc and is the primary mechanism for triggering third party logic on your end.
 
 status | description
@@ -25,7 +26,7 @@ cancelled | The invoice has been set to cancelled by a manager.
 
 ### Object
 
-```
+```json
 {
     "id": "deb62287-dbc6-4f11-8f83-d753f6cf1284",
     "user": {

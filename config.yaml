@@ -3,24 +3,32 @@ languageCode: "en-us"
 title: "Documentation"
 theme: "hexon-hugo-theme"
 
+markup:
+  highlight:
+    style: "dracula"
+  goldmark:
+    renderer:
+      unsafe: true
+
 params:
   companyName: ExampleCompany
   companyId: example_company
   appUrl: https://wallet.example.com
   invoicesApi: https://api.invoices.example.com
   businessApi: https://api.business.example.com
-  logoUrl: https://example.com
-  logoImage: https://rehive.s3.amazonaws.com/companies/2458/logos/6c4d8de546d74b30a3d19c78fb42ec16_1611825066.png
-  heroImage: https://rehive.s3.amazonaws.com/companies/2458/logos/6c4d8de546d74b30a3d19c78fb42ec16_1611825066.png
-  favicon: https://rehive.s3.amazonaws.com/companies/2458/logos/6c4d8de546d74b30a3d19c78fb42ec16_1611825066.png
 
-  primaryColor: "#002d6d"
-  secondaryColor: "#ff2852"
+  logoUrl: https://example.com
+  logoImage: /images/logo.svg
+  heroImage: /images/hero.svg
+  favicon: /images/favicon.png
+
+  primaryColor: "#5336FF"
+  secondaryColor: "#A4A5F5"
 
   extraNavItems:
-    - title: Log in
+    - title: Sign in
       url: https://wallet.example.com
 
   extraFooterItems:
-    - title: Log in
+    - title: Sign in
       url: https://wallet.example.com

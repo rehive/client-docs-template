@@ -8,9 +8,11 @@ weight: 2
 An invoice encapsulates the entire payments process. Once the customer has selected {{<param companyName>}} as a payment option the next step is for your system to generate a {{<param companyName>}} invoice for their payment.
 
 ### Create the invoice
+
 The first step to initiate the payment process is to create an invoice. This would usually be done once the user has selected {{<param companyName>}} as the payment option for the order they wish to pay for.
 
 ##### The core pieces of information required to create an invoice are:
+
 1. The total amount to be paid in your base currency
 2. Return url: When the user has completed their off-site payment this is the url they should be redirected back to.
 3. An optional “reference” field which ideally should match an identifier for your order within your e-commerce system
@@ -18,16 +20,17 @@ The first step to initiate the payment process is to create an invoice. This wou
 
 
 ### Endpoints
+
 URL | methods
 ---|---
 `​{{<param businessApi>}}/api/manager​/businesses​/{business_id}​/invoices​/` | `POST`
 
 ### Example data:
-```
+```json
 {
   "request_reference": "MY_ECOMMERCE_REFERENCE",
-  "request_amount": 10000, # Value of invoice in cents
-  "description": "Online payment for clothes", # Optional description text
+  "request_amount": 10000,
+  "description": "Online payment for clothes",
   "status": "initiated",
   "return_url": "https://my-ecommerce-store.com/order/<USER_ORDER_PAGE>",
 }
@@ -35,10 +38,11 @@ URL | methods
 ```
 
 ### Example success response:
-```
+
+```json
 {
   "id": "e7d7a5a2-9a97-4930-a992-589a6133488f",
-  "user": "{}", # User object
+  "user": {},
   "account": "string",
   "request_reference": "MY_ECOMMERCE_REFERENCE",
   "request_currency": {
@@ -50,7 +54,7 @@ URL | methods
       "divisibility": 2
     },
   "request_amount": 10000,
-  "Primary_payment_processor": “”,
+  "Primary_payment_processor": "",
   "description": "Online payment for clothes",
   "status": "initiated",
   "return_url": "https://my-ecommerce-store.com/order/<USER_ORDER_PAGE>",
@@ -62,14 +66,18 @@ URL | methods
 ```
 
 ### Redirect customer
+
 Once the invoice has been created the user needs to be redirected to the off-site payments page to handle choosing further payment options and making the payment. This is done after receiving the `redirect_url` field and sending the user directly to this link on successful invoice creation.
 
 When a user has completed payment they will automatically be directed back to the url defined in the `return_url` field.
 
 
 ### Cancelling invoice
+
 In the case where an invoice is no longer valid the status can be PATCH’d using the following endpoint:
+
 ### Endpoints
+
 URL | methods
 ---|---
 `​{{<param businessApi>}}/api/manager​/businesses​/{business_id}​/invoices​/` | `PATCH`
